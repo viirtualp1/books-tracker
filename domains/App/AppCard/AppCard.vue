@@ -1,5 +1,5 @@
 <template>
-  <v-card color="teal-darken-2" variant="tonal" class="app-card">
+  <v-card class="app-card">
     <v-card-text class="app-card__text">
       <div class="app-card__prepend">
         <slot name="prepend" />

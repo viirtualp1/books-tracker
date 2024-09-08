@@ -35,6 +35,7 @@ export interface BookData {
   last_page: number
   genre: GenreType | null
   chapter: ChapterData | null
+  in_series: string
   quotes: NoteData[]
   notes: NoteData[]
 }

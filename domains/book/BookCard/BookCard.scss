@@ -1,0 +1,49 @@
+.book-card {
+  &.is-small {
+    .book-card__info {
+      font-size: 18px;
+    }
+
+    .book-card__info-author {
+      font-size: 16px;
+    }
+
+    .book-card__info-progress > span {
+      font-size: 14px;
+    }
+
+    .book-card__info-image > img {
+      max-width: 154px;
+      height: 100px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 22px;
+  }
+
+  &__info-image > img {
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+  &__info-tags {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__info-author {
+    font-size: 18px;
+  }
+
+  &__info-progress {
+    span {
+      font-size: 16px;
+      color: grey;
+    }
+  }
+}

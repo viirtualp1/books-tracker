@@ -1,31 +1,4 @@
 .app-page {
-  &__info {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 22px;
-  }
-
-  &__info-image > img {
-    border-radius: 20px;
-  }
-
-  &__info-tags {
-    display: flex;
-    gap: 8px;
-  }
-
-  &__info-author {
-    font-size: 18px;
-  }
-
-  &__info-progress {
-    span {
-      font-size: 16px;
-      color: grey;
-    }
-  }
-
   &__row {
     margin-bottom: 32px;
   }

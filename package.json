@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "books-tracker",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,14 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^3.11.2"
+    "nuxt": "^3.13.1"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.0",
-    "axios": "^1.7.2",
-    "eslint": "^9.3.0",
+    "@mdi/font": "^7.4.47",
+    "@types/lodash": "^4.17.7",
+    "axios": "^1.7.7",
+    "eslint": "^9.10.0",
     "lodash": "^4.17.21",
-    "prettier": "^3.2.5",
-    "sass": "^1.77.2"
+    "prettier": "^3.3.3",
+    "sass": "^1.78.0",
+    "vuetify": "^3.7.1"
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <app-card class="book-card" :class="{ 'is-small': small }">
+  <app-card class="book-card" :class="{ 'is-small': small }" @click="openModal">
     <template #prepend>
       <div class="book-card__info">
         <div class="book-card__info-tags">
@@ -18,6 +18,10 @@
             size="small"
           >
             Входит в серию книг
+
+            <v-tooltip activator="parent" location="top">
+              {{ book.in_series }}
+            </v-tooltip>
           </v-chip>
         </div>
         <div v-if="book.image" class="book-card__info-image">
@@ -44,11 +48,14 @@
       </div>
     </template>
   </app-card>
+
+  <book-modal v-model="isOpen" :book="book" />
 </template>
 
 <script setup lang="ts">
-import { AppCard } from '@/domains/App'
 import type { BookData } from '@/types'
+import { AppCard } from '@/domains/App'
+import { BookModal } from '@/domains/book/'
 
 const props = defineProps<{
   book: BookData
@@ -56,11 +63,17 @@ const props = defineProps<{
   small?: boolean
 }>()
 
+const isOpen = ref(false)
+
 const bookProgress = computed(() => {
   const { page, last_page: lastPage } = props.book
 
   return String((page / lastPage) * 100).slice(0, 4)
 })
+
+function openModal() {
+  isOpen.value = true
+}
 </script>
 
 <style src="./BookCard.scss"></style>

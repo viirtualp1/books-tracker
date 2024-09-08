@@ -11,11 +11,7 @@
 
       <v-row>
         <v-col v-for="(book, bookIdx) in books" :key="bookIdx" cols="12" sm="4">
-          <book-card
-            :book="book"
-            @click="userStore.setCurrentBook(book)"
-            small
-          />
+          <book-card :book="book" small />
         </v-col>
       </v-row>
     </v-container>

@@ -15,12 +15,12 @@ export interface NoteData {
   text: string
 }
 
-export interface BookStateData {
-  is_reading: boolean
-  is_finished: boolean
-  is_abandoned: boolean
-  is_new: boolean
-  is_waiting: boolean
+export enum BookState {
+  IS_READING = 'is_reading',
+  IS_FINISHED = 'is_finished',
+  IS_ABANDONED = 'is_abandoned',
+  IS_NEW = 'is_new',
+  IS_WAITING = 'is_waiting',
 }
 
 export interface BookData {
@@ -30,11 +30,11 @@ export interface BookData {
   description: string | null
   source: string | null
   image: string | null
-  state: BookStateData
+  status: BookState
   page: number
   last_page: number
   genre: GenreType | null
-  chapter: ChapterData
+  chapter: ChapterData | null
   quotes: NoteData[]
   notes: NoteData[]
 }

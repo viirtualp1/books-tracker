@@ -1,9 +1,9 @@
 <template>
   <v-dialog
-    class="book-modal"
     v-model="currentModelValue"
     transition="dialog-bottom-transition"
-    fullscreen
+    class="book-modal"
+    :max-width="1000"
   >
     <v-card>
       <v-card-title class="book-modal__header">
@@ -16,7 +16,17 @@
         </v-btn>
       </v-card-title>
 
-      <v-card-text></v-card-text>
+      <v-card-text class="book-modal__content">
+        <div class="book-modal__description">
+          <strong>Описание</strong>
+
+          {{ book.description }}
+        </div>
+
+        <div v-if="book.image" class="book-modal__image">
+          <img :src="book.image" :alt="book.name" loading="lazy" width="400" />
+        </div>
+      </v-card-text>
     </v-card>
   </v-dialog>
 </template>

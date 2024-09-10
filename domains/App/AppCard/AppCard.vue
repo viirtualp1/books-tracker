@@ -1,5 +1,5 @@
 <template>
-  <v-card class="app-card">
+  <v-card class="app-card" :elevation="0" border="sm">
     <v-card-text class="app-card__text">
       <div class="app-card__prepend">
         <slot name="prepend" />
